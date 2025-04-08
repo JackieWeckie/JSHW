@@ -1,73 +1,93 @@
-//1
+        //1
 
-const nums = [];
+function exponentTheLessNum() {
 
+        let firstNum = prompt('Введите первое число');
+        let secondNum = prompt('Введите второе число');
 
-let input = prompt('Введите любое число кроме 0. Число 0 завершит процесс выполнения.');
-const num = parseFloat(input);
+        if (firstNum < secondNum) {
+                alert(`Число ${firstNum} меньше числа ${secondNum}`);
+        } else if (firstNum > secondNum) {
+                alert(`Число ${secondNum} меньше числа ${firstNum}`);
+        } else {
+                alert('Числа равны')
+        }
 
-if (isNaN(num) || num == 0) {
-        alert('Вы ввели 0 или не число. Процесс завершён.');
-} else {
-        nums.push(num);
+        let exponention = prompt(`Введите степень для меньшего числа`);
+
+        //2
+
+        if (firstNum < secondNum) {
+                alert(firstNum ** exponention);
+        } else if (firstNum > secondNum) {
+                alert(secondNum ** exponention);
+        } else {
+                alert(firstNum ** exponention);
+        }
 }
 
-if (nums.length === 0) {
-        console.log('Введённых чисел нет');
+        //3
+
+let firstInput = prompt('Введите первое число');
+let secondInput = prompt('Введите второе число');
+let option = prompt('Выберите действие, ВВОДЯ ЗНАК: сложение (+), вычитание (-), умножение (*), деление (/)');
+let result;
+
+// switch (key) {
+//         case "+":
+//                 alert('Это будет:', firstInput + secondInput);
+//                 break;
+
+//         case "-":
+//                 alert('Это будет:', firstInput - secondInput);
+//                 break;
+
+//         case "*":
+//                 alert('Это будет:', firstInput * secondInput);
+//                 break;
+
+//         case "/":
+//                 if (firstInput > 0 && secondInput > 0) {
+//                         alert('Это будет:', firstInput / secondInput);
+//                         break;
+//                 } else {
+//                         alert('Вы не можете делить на 0');
+//                         break;
+//                 }
+
+//         default:
+//                 alert('Неккоректное действие. Попробуйте ещё раз.');
+//                 break;
+// }
+
+        //4
+
+function isPrime(num) {
+        if (num <= 1) {
+                return false;
+        }
+
+        for (let i = 2; i < num; i++) {
+                if (num % i == 0) {
+                        return false;
+                }
+        }
+        return true;
 }
 
-const max = Math.max(...nums);
-const min = Math.min(...nums);
-const sum = nums.reduce((acc, val) => acc + val, 0);
-const average = sum / nums.length;
+console.log(isPrime(33));
+console.log(isPrime(24)); 
+console.log(isPrime(1));
 
-console.log(`Максимальное значение: ${max}`);
-console.log(`Минимальное значение: ${min}`);
-console.log(`Сумма: ${sum}`);
-console.log(`Среднее арифметическое: ${average}`);
+        //5
 
-
-//2
-
-
-const x = prompt('Введите значение для X');
-const array = [];
-
-for (let i = 0; i < 5; i++) {
-        const element = prompt(`Введите элемент массива ${i + 1}:`);
-        array.push(element);
+function getMultiTable(num) {
+        console.log(`Таблица умножения для ${num}:`);
+        for (let i = 1; i <= 10; i++) {
+                console.log(`${num} x ${i} = ${num * i}`);
+        }
 }
 
-const index = array.indexOf(x);
-
-if (index === -1) {
-        console.log('Значение X не найдено в массиве.');
-}
-
-const leftElement = index === 0 ? array[array.length - 1] : array[index - 1];
-const rightElement = index === array.length - 1 ? array[0] : array[index + 1];
-
-console.log(`Индекс X: ${index}`);
-console.log(`Левый соседний элемент: ${leftElement}`);
-console.log(`Правый соседний элемент: ${rightElement}`);
-
-
-
-//3
-
-
-const evenNums = [];
-const oddNums = [];
-
-for (let i = 0; i < 10; i++) {
-        const str = prompt(`Введите строку ${i + 1}`);
-}
-
-if (evenNums.length % 2 === 0) {
-        evenNums.push(str);
-} else {
-        oddNums.push(str);
-}
-
-console.log('Строки с чётными цифрами: ', evenNums);
-console.log('Строки с нечётными цифрами: ', oddNums);
+console.log(getMultiTable(4));
+console.log(getMultiTable(7));
+console.log(getMultiTable(2));

@@ -1,0 +1,46 @@
+*{
+        background: #264422;
+        font-family: Segoe UI;
+        padding: 10px 10px 10px 10px;
+}
+
+.container-color input {
+        border-radius: 10px;
+        width: 30vw;
+        height: 15vh;
+        background: #bbbbbb;
+        padding-top: 1px;
+        padding-bottom: 1px;
+        justify-content: center;
+}
+
+button {
+        padding: 10px 20px;
+        background-color: #909192;
+        color: #1d1d1d;
+        border-radius: 10px;
+        cursor: pointer;
+        text-align: center;
+        margin-left: 70px;
+}
+
+.container-logIn h1 {
+        color: #c2c2c2;
+        font-size: 40px;
+}
+
+.password-input input {
+        border-radius: 10px;
+        background-color: #909192;
+        color: #1d1d1d;
+}
+
+.container-logIn .submitButton input {
+        background:#909192;
+        border-radius: 10px;
+}
+
+.container-logIn p {
+        color: #C2200A;
+        margin-top: 10px;
+}

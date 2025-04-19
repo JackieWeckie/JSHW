@@ -4,12 +4,32 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
+        <link rel="stylesheet" href="style.css">
 </head>
 <body>
+        <div class="container-color">
+                <div id="colorBlock" class="color-block">
+                <input type="color" id="colorPicker">
+                <button onclick="changeColor()">Изменить цвет</button>
+                </div>
+        </div>
 
-        <script src="script7.js"></script>
+
+        <div class="container-logIn">
+                <h1>Регистрация</h1>
+
+                <div class="password-input">
+                <input type="password" id="password" placeholder="Введите пароль">
+                <input type="password" id="password" placeholder="Подтвердите пароль">
+
+                <div class="submitButton">
+                <input type="submit" value="SUBMIT">
+        </div>
+        
+                <p class="errorMessage"></p>
+        </div>
+        </div>
 
         <script src="script.js"></script>
-
 </body>
 </html>

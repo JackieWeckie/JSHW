@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+</head>
+<body>
+        <button onclick="filterCities(0, 50000)">Менее 50 тыс</button>
+        <button onclick="filterCities(50000, 100000)">50 тыс - 100 тыс</button>
+        <button onclick="filterCities(100000, 250000)">100 тыс - 250 тыс</button>
+        <button onclick="filterCities(250000, Infinity)">Более 250 тыс</button>
+        <div id="output"></div>
+
+        <script src="script3.js"></script>
+</body>
+</html>
